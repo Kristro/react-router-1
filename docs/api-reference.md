@@ -647,6 +647,16 @@ The `navigate` function has two signatures:
 - Either pass a `To` value (same type as `<Link to>`) with an optional second `{ replace, state }` arg or
 - Pass the delta you want to go in the history stack. For example, `navigate(-1)` is equivalent to hitting the back button.
 
+<a name="useoutlet"></a>
+
+### `useOutlet`
+
+```tsx
+declare function useOutlet(): React.ReactElement | null;
+```
+
+ Returns the element for the child route at this level of the route hierarchy. This hook is used internally by [`<Outlet>`](#outlet) to render child routes.
+
 <a name="useprompt"></a>
 
 ### `usePrompt`

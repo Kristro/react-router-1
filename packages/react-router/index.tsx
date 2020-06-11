@@ -515,8 +515,8 @@ export function useNavigate(): NavigateFunction {
 }
 
 /**
- * Returns the outlet element at this level of the route hierarchy. Used to
- * render child routes.
+ * Returns the element at this level of the route hierarchy. Used internally
+ * by <Outlet> to render child routes.
  * 
  * @see https://reactrouter.com/api/useOutlet
  */
@@ -525,9 +525,8 @@ export function useOutlet(): React.ReactElement | null {
 }
 
 /**
- * Returns a hash of the dynamic params that were matched in the route path.
- * This is useful for using ids embedded in the URL to fetch data, but we
- * eventually want to provide something at a higher level for this.
+ * Returns an object of key/value pairs of the dynamic params that were matched
+ * in the route path.
  * 
  * @see https://reactrouter.com/api/useParams
  */
@@ -536,7 +535,9 @@ export function useParams(): Params {
 }
 
 /**
- * Returns a fully-resolved location object relative to the current location.
+ * Returns a fully-resolved Location object, relative to the current location.
+ * 
+ * @see https://reactrouter.com/api/useResolvedLocation
  */
 export function useResolvedLocation(to: To): ResolvedLocation {
   let { pathname } = React.useContext(RouteContext);
