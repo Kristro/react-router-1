@@ -586,6 +586,12 @@ declare function useBlocker(blocker: Blocker, when = true): void;
 
 TODO
 
+<a name="useinroutercontext"></a>
+
+### `useInRouterContext`
+
+TODO
+
 <a name="uselocation"></a>
 
 ### `useLocation`
