@@ -580,6 +580,12 @@ declare function useBlocker(blocker: Blocker, when = true): void;
 
 `useBlocker` is a low-level hook that allows you to block navigation away from the current page, i.e. prevent the current location from changing. This is probably something you don't ever want to do unless you also display a confirmation dialog to the user to help them understand why their navigation attempt was blocked. In these cases, you probably want to use [`usePrompt`](#useprompt) or [`<Prompt>`](#prompt) instead.
 
+<a name="usehref"></a>
+
+### `useHref`
+
+TODO
+
 <a name="uselocation"></a>
 
 ### `useLocation`
