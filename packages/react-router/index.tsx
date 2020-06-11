@@ -116,6 +116,8 @@ if (__DEV__) {
 
 /**
  * A <Router> that stores all entries in memory.
+ * 
+ * @see https://reactrouter.com/api/memoryrouter
  */
 export function MemoryRouter({
   children,
@@ -175,7 +177,7 @@ if (__DEV__) {
 }
 
 /**
- * Navigate programmatically using a component.
+ * Changes the current location.
  * 
  * Note: This API is mostly useful in React.Component subclasses that are not
  * able to use hooks. In functional components, we recommend you use the
