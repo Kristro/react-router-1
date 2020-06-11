@@ -1,20 +1,18 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import {
-  // types
   Action,
-  Path,
-  State,
+  Blocker,
+  History,
+  InitialEntry,
   LocationPieces,
   Location,
-  Update,
-  Transition,
-  Blocker,
-  To,
-  History,
   MemoryHistory,
-  InitialEntry,
-  // utils
+  Path,
+  State,
+  To,
+  Transition,
+  Update,
   createMemoryHistory,
   parsePath
 } from 'history';
