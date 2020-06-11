@@ -717,6 +717,24 @@ function SignupForm() {
 > If you need a more custom dialog box, you will have to use [`useBlocker`](#useblocker)
 > directly and handle accessibility issues yourself.
 
+<a name="useresolvedlocation"></a>
+
+### `useResolvedLocation`
+
+```tsx
+declare function useResolvedLocation(to: To): ResolvedLocation;
+
+type ResolvedLocation = {
+  pathname: string;
+  search: string;
+  hash: string;
+}
+```
+
+This hook resolves the `pathname` of the location in the given `to` value against the pathname of the current location.
+
+This is useful when building links from relative values. For example, check out the source to [`<NavLink>`](#navlink) which calls `useResolvedLocation` internally to resolve the full pathname of the page being linked to.
+
 <a name="useroutes"></a>
 <a name="partialrouteobject"></a>
 
