@@ -411,10 +411,12 @@ export function useInRouterContext(): boolean {
 /**
  * Returns the current location object, which represents the current URL in web
  * browsers.
- *
- * NOTE: If you're using this it may mean you're doing some of your own
- * "routing" in your app, and we'd like to know what your use case is. We may be
- * able to provide something higher-level to better suit your needs.
+ * 
+ * Note: If you're using this it may mean you're doing some of your own
+ * "routing" in your app, and we'd like to know what your use case is. We may
+ * be able to provide something higher-level to better suit your needs.
+ * 
+ * @see https://reactrouter.com/api/useLocation
  */
 export function useLocation(): Location {
   invariant(
@@ -438,6 +440,8 @@ export function useLocationPending(): boolean {
  * Returns true if the URL for the given "to" value matches the current URL.
  * This is useful for components that need to know "active" state, e.g.
  * <NavLink>.
+ * 
+ * @see https://reactrouter.com/api/useMatch
  */
 export function useMatch(path: PathPattern): PathMatch | null {
   invariant(
@@ -466,6 +470,8 @@ export interface NavigateFunction {
 /**
  * Returns an imperative method for changing the location. Used by <Link>s, but
  * may also be used by other elements to change the location.
+ * 
+ * @see https://reactrouter.com/api/useNavigate
  */
 export function useNavigate(): NavigateFunction {
   invariant(
