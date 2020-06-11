@@ -584,13 +584,27 @@ declare function useBlocker(blocker: Blocker, when = true): void;
 
 ### `useHref`
 
-TODO
+```tsx
+declare function useHref(to: To): string;
+```
+
+The `useHref` hook returns a URL that may be used to link to the given `to` location, even outside of React Router.
+
+> [!Tip:]
+>
+> You may be interested in taking a look at the source for the `<Link>`
+> component to see how it uses `useHref` internally to determine its own
+> `href` value.
 
 <a name="useinroutercontext"></a>
 
 ### `useInRouterContext`
 
-TODO
+```tsx
+declare function useInRouterContext(): boolean;
+```
+
+The `useInRouterContext` hooks returns `true` if the component is being rendered in the context of a `<Router>`, `false` otherwise. This can be useful for some 3rd-party extensions that need to know if they are being rendered in the context of a React Router app.
 
 <a name="uselocation"></a>
 
