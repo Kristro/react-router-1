@@ -405,6 +405,8 @@ export function useHref(to: To): string {
 
 /**
  * Returns true if this component is a descendant of a <Router>.
+ * 
+ * @see https://reactrouter.com/api/useInRouterContext
  */
 export function useInRouterContext(): boolean {
   return React.useContext(LocationContext).location != null;
@@ -433,6 +435,8 @@ export function useLocation(): Location {
 
 /**
  * Returns true if the router is pending a location update.
+ * 
+ * @see https://reactrouter.com/api/useLocationPending
  */
 export function useLocationPending(): boolean {
   return React.useContext(LocationContext).pending;
