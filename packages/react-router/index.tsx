@@ -515,8 +515,8 @@ export function useNavigate(): NavigateFunction {
 }
 
 /**
- * Returns the element at this level of the route hierarchy. Used internally
- * by <Outlet> to render child routes.
+ * Returns the element for the child route at this level of the route
+ * hierarchy. Used internally by <Outlet> to render child routes.
  * 
  * @see https://reactrouter.com/api/useOutlet
  */
@@ -525,8 +525,8 @@ export function useOutlet(): React.ReactElement | null {
 }
 
 /**
- * Returns an object of key/value pairs of the dynamic params that were matched
- * in the route path.
+ * Returns an object of key/value pairs of the dynamic params from the current
+ * URL that were matched by the route path.
  * 
  * @see https://reactrouter.com/api/useParams
  */
