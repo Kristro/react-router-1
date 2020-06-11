@@ -593,8 +593,8 @@ The `useHref` hook returns a URL that may be used to link to the given `to` loca
 > [!Tip:]
 >
 > You may be interested in taking a look at the source for the `<Link>`
-> component to see how it uses `useHref` internally to determine its own
-> `href` value.
+> component in `react-router-dom` to see how it uses `useHref` internally to
+> determine its own `href` value.
 
 <a name="useinroutercontext"></a>
 
