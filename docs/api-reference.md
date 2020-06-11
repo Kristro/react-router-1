@@ -657,6 +657,38 @@ declare function useOutlet(): React.ReactElement | null;
 
  Returns the element for the child route at this level of the route hierarchy. This hook is used internally by [`<Outlet>`](#outlet) to render child routes.
 
+<a name="useparams"></a>
+
+### `useParams`
+
+```tsx
+declare function useParams(): Params;
+```
+
+The `useParams` hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the `<Route path>`. Child routes inherit all params from their parent routes.
+
+```tsx
+import React from 'react';
+import { Routes, Route, useParams } from 'react-router-dom';
+
+function ProfilePage() {
+  // Get the userId param from the URL.
+  let { userId } = useParams();
+  // ...
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="users">
+        <Route path=":userId" element={<ProfilePage />} />
+        <Route path="me" element={...} />
+      </Route>
+    </Routes>
+  );
+}
+```
+
 <a name="useprompt"></a>
 
 ### `usePrompt`

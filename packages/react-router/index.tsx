@@ -535,7 +535,8 @@ export function useParams(): Params {
 }
 
 /**
- * Returns a fully-resolved Location object, relative to the current location.
+ * Resolves the pathname of the location in the given `to` value against the
+ * current location.
  * 
  * @see https://reactrouter.com/api/useResolvedLocation
  */
