@@ -619,6 +619,12 @@ function App() {
 }
 ```
 
+<a name="uselocationpending"></a>
+
+### `useLocationPending`
+
+TODO
+
 <a name="usenavigate"></a>
 
 ### `useNavigate`
