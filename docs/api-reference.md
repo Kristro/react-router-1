@@ -600,7 +600,7 @@ TODO
 declare function useLocation(): Location;
 ```
 
-Returns the current [`location`](#location) object. This can be useful if you'd like to perform some side effect whenever the current location changes.
+This hook returns the current [`location`](#location) object. This can be useful if you'd like to perform some side effect whenever the current location changes.
 
 ```tsx
 import React from 'react';
@@ -623,7 +623,11 @@ function App() {
 
 ### `useLocationPending`
 
-TODO
+```tsx
+declare function useLocationPending(): boolean;
+```
+
+The `useLocationPending` hook returns `true` if a location change is currently pending. This can be useful for showing a loading indicator somewhere in the app.
 
 <a name="usematch"></a>
 
