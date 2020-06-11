@@ -176,6 +176,12 @@ if (__DEV__) {
 
 /**
  * Navigate programmatically using a component.
+ * 
+ * Note: This API is mostly useful in React.Component subclasses that are not
+ * able to use hooks. In functional components, we recommend you use the
+ * `useNavigate` hook instead.
+ * 
+ * @see https://reactrouter.com/api/Navigate
  */
 export function Navigate({ to, replace, state }: NavigateProps): null {
   invariant(
@@ -224,6 +230,8 @@ if (__DEV__) {
 
 /**
  * Renders the child route's element, if there is one.
+ * 
+ * @see https://reactrouter.com/api/Outlet
  */
 export function Outlet(): React.ReactElement | null {
   return useOutlet();
@@ -237,7 +245,9 @@ if (__DEV__) {
 }
 
 /**
- * Used in a route config to render an element.
+ * Declares an element that should be rendered at a certain URL path.
+ * 
+ * @see https://reactrouter.com/api/Route
  */
 export function Route({
   element = <Outlet />
@@ -264,10 +274,13 @@ if (__DEV__) {
 }
 
 /**
- * The low-level root context provider in a React Router app. You usually won't
- * render a <Router> directly. Instead, you'll render a router that is more
- * specific to your environment such as a <BrowserRouter> in web browsers or a
- * <StaticRouter> for server rendering.
+ * Provides location context for the rest of the app.
+ * 
+ * Note: You usually won't render a <Router> directly. Instead, you'll render a
+ * router that is more specific to your environment such as a <BrowserRouter>
+ * in web browsers or a <StaticRouter> for server rendering.
+ * 
+ * @see https://reactrouter.com/api/Router
  */
 export function Router({
   children = null,
@@ -321,6 +334,8 @@ if (__DEV__) {
 /**
  * A container for a nested tree of <Route> elements that renders the branch
  * that best matches the current location.
+ * 
+ * @see https://reactrouter.com/api/Routes
  */
 export function Routes({
   basename = '',
