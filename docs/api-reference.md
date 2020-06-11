@@ -625,6 +625,12 @@ function App() {
 
 TODO
 
+<a name="usematch"></a>
+
+### `useMatch`
+
+TODO
+
 <a name="usenavigate"></a>
 
 ### `useNavigate`
