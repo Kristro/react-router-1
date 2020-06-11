@@ -350,6 +350,8 @@ if (__DEV__) {
 /**
  * Blocks all navigation attempts. This is useful for preventing the page from
  * changing until some condition is met, like saving form data.
+ * 
+ * @see https://reactrouter.com/api/useBlocker
  */
 export function useBlocker(blocker: Blocker, when = true): void {
   invariant(
